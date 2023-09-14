@@ -1,0 +1,64 @@
+.mapContainer {
+  width: 90%;
+  margin: 0 auto;
+
+  position: relative;
+  padding-bottom: 10%;
+}
+.mapImage {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  min-width: 1000px;
+}
+.button {
+  color: #fff;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 55px;
+  border: 3px solid #fff;
+  background: #000;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 40px;
+  position: absolute;
+  right: 12%;
+  bottom: 8%;
+}
+
+@media only screen and (max-width: 1399px) {
+  .button {
+    font-size: 38px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .button {
+    font-size: 32px;
+    right: 50px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .button {
+    font-size: 28px;
+    right: 0px;
+    border-width: 2px;
+    bottom: 0px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .mapContainer {
+    padding-bottom: 60px;
+  }
+  .button {
+    font-size: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+}

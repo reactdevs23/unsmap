@@ -1,0 +1,120 @@
+.header {
+  transition: all 0.5s ease-in-out;
+}
+.headerInner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+.logo {
+  width: 180px;
+  object-fit: contain;
+}
+.headerInner nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+}
+.navItem {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.navItem:hover {
+  color: rgb(29 204 29);
+}
+
+.connectButton {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+
+  height: 2.5rem;
+  width: 128px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgb(29, 204, 29);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+.connectButton:hover {
+  background-color: rgb(29, 204, 29);
+
+  color: #fff;
+}
+
+.mobile {
+  display: none;
+}
+.desktop {
+  display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+  .mobile {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
+  .headerInner {
+    padding: 18px 0;
+  }
+  .headerInner nav {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 280px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 25px;
+    padding-top: 80px;
+
+    overflow-y: auto;
+    gap: 30px;
+    background-color: #101010;
+    transition: 0.5s;
+  }
+
+  .hamberGer {
+    font-size: 28px;
+    object-fit: contain;
+    color: #fff;
+    cursor: pointer;
+  }
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .logo {
+    width: 130px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .headerInner nav {
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
